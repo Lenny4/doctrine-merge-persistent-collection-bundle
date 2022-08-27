@@ -22,9 +22,9 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ORM\Entity(repositoryClass: SonRepository::class)]
 class Son
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[ORM\GeneratedValue]
+    #[ORM\Id]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
@@ -35,8 +35,8 @@ class Son
     #[Groups(['w-father'])]
     private ?int $age = null;
 
-    #[ORM\ManyToOne(inversedBy: 'sons')]
     #[ORM\JoinColumn(nullable: false)]
+    #[ORM\ManyToOne(inversedBy: 'sons')]
     private ?Father $father = null;
 
     public function getId(): ?int

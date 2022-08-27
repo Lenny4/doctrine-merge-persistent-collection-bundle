@@ -28,15 +28,18 @@ use Symfony\Component\Serializer\Annotation\Groups;
 #[ORM\Entity(repositoryClass: FatherRepository::class)]
 class Father
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[ORM\GeneratedValue]
+    #[ORM\Id]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
     #[Groups(['w-father'])]
     private ?string $name = null;
 
+    /**
+     * @var Collection<int, Son>|Son[]
+     */
     #[ORM\OneToMany(mappedBy: 'father', targetEntity: Son::class, cascade: ['persist', 'remove'], orphanRemoval: true)]
     #[Groups(['w-father'])]
     private Collection $sons;
@@ -83,11 +86,9 @@ class Father
 
     public function removeSon(Son $son): self
     {
-        if ($this->sons->removeElement($son)) {
-            // set the owning side to null (unless already changed)
-            if ($son->getFather() === $this) {
-                $son->setFather(null);
-            }
+        // set the owning side to null (unless already changed)
+        if ($this->sons->removeElement($son) && $son->getFather() === $this) {
+            $son->setFather(null);
         }
 
         return $this;

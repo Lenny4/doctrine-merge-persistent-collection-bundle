@@ -15,7 +15,7 @@ class DoctrineMergePersistentCollectionTest extends ApiTestCase
     {
         $method = Request::METHOD_PUT;
         $client = self::createClient();
-        $response = $client->request($method, self::FATHER_ENDPOINT, [
+        $client->request($method, self::FATHER_ENDPOINT, [
             'json' => [
                 'name' => 'father2',
                 'sons' => []
@@ -36,7 +36,7 @@ class DoctrineMergePersistentCollectionTest extends ApiTestCase
     {
         $method = Request::METHOD_PUT;
         $client = self::createClient();
-        $response = $client->request($method, self::FATHER_ENDPOINT, [
+        $client->request($method, self::FATHER_ENDPOINT, [
             'json' => [
                 'name' => 'father2',
                 'sons' => [
@@ -70,7 +70,7 @@ class DoctrineMergePersistentCollectionTest extends ApiTestCase
     {
         $method = Request::METHOD_PUT;
         $client = self::createClient();
-        $response = $client->request($method, self::FATHER_ENDPOINT, [
+        $client->request($method, self::FATHER_ENDPOINT, [
             'json' => [
                 'name' => 'father2',
                 'sons' => [
@@ -108,7 +108,7 @@ class DoctrineMergePersistentCollectionTest extends ApiTestCase
     {
         $method = Request::METHOD_PUT;
         $client = self::createClient();
-        $response = $client->request($method, self::FATHER_ENDPOINT, [
+        $client->request($method, self::FATHER_ENDPOINT, [
             'json' => [
                 'name' => 'father2',
                 'sons' => [
@@ -138,7 +138,7 @@ class DoctrineMergePersistentCollectionTest extends ApiTestCase
     {
         $method = Request::METHOD_PUT;
         $client = self::createClient();
-        $response = $client->request($method, self::FATHER_ENDPOINT, [
+        $client->request($method, self::FATHER_ENDPOINT, [
             'json' => [
                 'name' => 'father2',
                 'sons' => [
