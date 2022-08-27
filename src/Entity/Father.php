@@ -37,7 +37,7 @@ class Father
     #[Groups(['w-father'])]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'father', targetEntity: Son::class, orphanRemoval: true)]
+    #[ORM\OneToMany(mappedBy: 'father', targetEntity: Son::class, cascade: ['persist', 'remove'], orphanRemoval: true)]
     #[Groups(['w-father'])]
     private Collection $sons;
 
