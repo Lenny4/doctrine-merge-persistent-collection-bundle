@@ -25,11 +25,9 @@ jobs:
             esac
           done
           exit 1
-      - name: Create test database
-        run: docker-compose exec -T php bin/console -e test doctrine:database:create
       - name: Create database schema
-        run: docker-compose exec -T php bin/console -e test doctrine:schema:update --force
+        run: docker-compose exec -T php bin/console doctrine:schema:update --force
       - name: Load fixtures
-        run: docker-compose exec -T php bin/console -e test doctrine:fixtures:load --no-interaction
+        run: docker-compose exec -T php bin/console doctrine:fixtures:load --no-interaction
       - name: PHPUnit
         run: docker-compose exec -T php bin/phpunit
