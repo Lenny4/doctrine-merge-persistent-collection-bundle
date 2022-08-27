@@ -10,6 +10,7 @@
                  class="Lenny4\DoctrineMergePersistentCollectionBundle\DoctrineMergePersistentCollection"
                  public="true"/>
         <service id="Lenny4\DoctrineMergePersistentCollectionBundle\DoctrineMergePersistentCollection"
-                 alias="lenny4.doctrine_merge_persistent_collection" public="false"/>
+                 alias="lenny4.doctrine_merge_persistent_collection"
+                 public="false"/>
     </services>
 </container>
