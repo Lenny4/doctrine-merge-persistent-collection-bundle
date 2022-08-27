@@ -26,6 +26,7 @@
     },
     "require-dev": {
         "api-platform/core": "^2.6",
+        "dama/doctrine-test-bundle": "^7.1",
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
@@ -88,7 +89,8 @@
     "prefer-stable": true,
     "extra": {
         "symfony": {
-            "docker": true
+            "docker": true,
+            "allow-contrib": true
         }
     }
 }

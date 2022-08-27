@@ -40,4 +40,7 @@
     <logging>
         <junit outputFile="build/report.junit.xml"/>
     </logging>
+    <extensions>
+        <extension class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension"/>
+    </extensions>
 </phpunit>
