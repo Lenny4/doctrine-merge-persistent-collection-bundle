@@ -1,12 +1,12 @@
 {
-    "name": "lenny4/doctrine-merge-persistent-collection",
+    "name": "lenny4/doctrine-merge-persistent-collection-bundle",
     "description": "Merge persistence collection when update entity",
     "type": "symfony-bundle",
     "keywords": [
         "Lenny4",
-        "doctrine-merge-persistent-collection"
+        "doctrine-merge-persistent-collection-bundle"
     ],
-    "homepage": "https://github.com/lenny4/doctrine-merge-persistent-collection",
+    "homepage": "https://github.com/lenny4/doctrine-merge-persistent-collection-bundle",
     "license": "MIT",
     "authors": [
         {
