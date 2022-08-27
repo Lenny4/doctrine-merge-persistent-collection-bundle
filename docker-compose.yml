@@ -8,16 +8,21 @@ services:
       args:
         SYMFONY_VERSION: ${SYMFONY_VERSION:-}
         STABILITY: ${STABILITY:-stable}
+    depends_on:
+      - db
     env_file:
       - .env
     restart: unless-stopped
     volumes:
       - php_socket:/var/run/php
+      - ./:/srv/app:rw
     healthcheck:
       interval: 10s
       timeout: 3s
       retries: 3
       start_period: 30s
+    environment:
+      PHP_IDE_CONFIG: serverName=xdebug-doctrine-merge-persistent-collection
 
   db:
     image: postgres:${POSTGRES_VERSION}-alpine

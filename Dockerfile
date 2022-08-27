@@ -118,7 +118,7 @@ RUN set -eux; \
 # Dev image
 FROM app_php AS app_php_dev
 
-ENV APP_ENV=dev XDEBUG_MODE=off
+ENV APP_ENV=dev
 VOLUME /srv/app/var/
 
 RUN rm $PHP_INI_DIR/conf.d/app.prod.ini; \
