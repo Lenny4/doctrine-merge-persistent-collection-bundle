@@ -1,6 +1,7 @@
 {
     "name": "lenny4/doctrine-merge-persistent-collection-bundle",
     "description": "Merge persistence collection when update entity",
+    "version": "1.0.0",
     "type": "symfony-bundle",
     "keywords": [
         "Lenny4",
