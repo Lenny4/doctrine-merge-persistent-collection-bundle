@@ -1,0 +1,7 @@
+# https://symfony.com/bundles/SymfonyMakerBundle/current/index.html#configuration
+# config/packages/dev/maker.yaml
+# create this file if you need to configure anything
+maker:
+  # tell MakerBundle that all of your classes live in an
+  # Lenny4\DoctrineMergePersistentCollectionBundle namespace, instead of the default App
+  root_namespace: 'Lenny4\DoctrineMergePersistentCollectionBundle'
