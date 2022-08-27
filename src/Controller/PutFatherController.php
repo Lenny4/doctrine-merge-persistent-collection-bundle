@@ -11,7 +11,7 @@ class PutFatherController extends AbstractController
 {
     public function __invoke(Father $data, DoctrineMergePersistentCollection $doctrineMergePersistentCollection): Father
     {
-        $doctrineMergePersistentCollection->mergePersistentCollection(
+        $doctrineMergePersistentCollection->merge(
             $data->getSons(),
             static function (Son $son1, Son $son2) {
                 return $son1->getName() === $son2->getName();

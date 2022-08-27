@@ -6,7 +6,7 @@ use Doctrine\ORM\PersistentCollection;
 
 class DoctrineMergePersistentCollection
 {
-    public function mergePersistentCollection(
+    public function merge(
         PersistentCollection $collection,
         callable             $areIdentique,
         callable|null        $mergeElement = null
