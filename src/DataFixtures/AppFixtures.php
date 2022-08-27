@@ -13,14 +13,22 @@ class AppFixtures extends Fixture
     {
         $father = new Father();
         $father->setName('father1');
+        $manager->persist($father);
+
         $son1 = new Son();
         $son1
+            ->setFather($father)
             ->setName('son1')
             ->setAge(10);
+        $manager->persist($son1);
+
         $son2 = new Son();
         $son2
+            ->setFather($father)
             ->setName('son2')
             ->setAge(20);
+        $manager->persist($son2);
+
         $manager->flush();
     }
 }

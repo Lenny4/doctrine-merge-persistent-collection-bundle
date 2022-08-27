@@ -18,6 +18,10 @@
     beStrictAboutOutputDuringTests="true"
     verbose="true"
 >
+    <php>
+        <server name="APP_ENV" value="test" force="true"/>
+        <server name="KERNEL_CLASS" value="Lenny4\DoctrineMergePersistentCollectionBundle\Kernel"/>
+    </php>
     <testsuites>
         <testsuite name="DoctrineMergePersistentCollection Test Suite">
             <directory>tests</directory>

@@ -25,20 +25,34 @@
         "symfony/symfony": "*"
     },
     "require-dev": {
+        "api-platform/core": "^2.6",
+        "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "doctrine/doctrine-migrations-bundle": "^3.2",
+        "nelmio/cors-bundle": "^2.2",
+        "phpdocumentor/reflection-docblock": "^5.3",
+        "phpstan/phpdoc-parser": "^1.7",
         "phpunit/phpunit": "^9.5",
         "roave/security-advisories": "dev-latest",
+        "symfony/asset": "^6.1",
         "symfony/browser-kit": "^6.1",
         "symfony/css-selector": "^6.1",
         "symfony/dotenv": "^6.1",
+        "symfony/expression-language": "^6.1",
         "symfony/flex": "^2.2",
         "symfony/framework-bundle": "^6.1",
+        "symfony/http-client": "^6.1",
         "symfony/maker-bundle": "^1.45",
         "symfony/phpunit-bridge": "^6.1",
+        "symfony/property-access": "^6.1",
+        "symfony/property-info": "^6.1",
         "symfony/proxy-manager-bridge": "^6.1",
         "symfony/runtime": "^6.1",
+        "symfony/security-bundle": "^6.1",
+        "symfony/serializer": "^6.1",
+        "symfony/twig-bundle": "^6.1",
+        "symfony/validator": "^6.1",
         "symfony/yaml": "^6.1"
     },
     "autoload": {
@@ -52,7 +66,7 @@
         }
     },
     "scripts": {
-        "test": "php bin/console doctrine:fixtures:load --no-interaction && php bin/phpunit",
+        "test": "php bin/console doctrine:database:drop --force --if-exists -e test && php bin/console doctrine:database:create -e test && php bin/console doctrine:schema:update --force -e test && php bin/console doctrine:fixtures:load --no-interaction -e test && php bin/phpunit",
         "auto-scripts": {
             "cache:clear": "symfony-cmd"
         },

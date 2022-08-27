@@ -2,11 +2,29 @@
 
 namespace Lenny4\DoctrineMergePersistentCollectionBundle\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Controller\PutFatherController;
 use Lenny4\DoctrineMergePersistentCollectionBundle\Repository\FatherRepository;
+use Symfony\Component\Serializer\Annotation\Groups;
 
+#[ApiResource(
+    collectionOperations: [
+        'get',
+    ],
+    itemOperations: [
+        'get',
+        'put' => [
+            'controller' => PutFatherController::class,
+        ],
+    ],
+    attributes: [
+        'normalization_context' => ['groups' => ['r-father']],
+        'denormalization_context' => ['allow_extra_attributes' => false, 'groups' => ['w-father']],
+    ],
+)]
 #[ORM\Entity(repositoryClass: FatherRepository::class)]
 class Father
 {
@@ -16,9 +34,11 @@ class Father
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['w-father'])]
     private ?string $name = null;
 
-    #[ORM\OneToMany(mappedBy: 'father', targetEntity: Son::class)]
+    #[ORM\OneToMany(mappedBy: 'father', targetEntity: Son::class, orphanRemoval: true)]
+    #[Groups(['w-father'])]
     private Collection $sons;
 
     public function __construct()
