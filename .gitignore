@@ -82,3 +82,8 @@ docker-compose.override.yml
 ###< lexik/jwt-authentication-bundle ###
 
 .scannerwork
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###

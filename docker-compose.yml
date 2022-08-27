@@ -1,0 +1,48 @@
+version: "3.4"
+
+services:
+  php:
+    build:
+      context: .
+      target: app_php_dev
+      args:
+        SYMFONY_VERSION: ${SYMFONY_VERSION:-}
+        STABILITY: ${STABILITY:-stable}
+    restart: unless-stopped
+    volumes:
+      - php_socket:/var/run/php
+    healthcheck:
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+
+  db:
+    image: postgres:${POSTGRES_VERSION}-alpine
+    restart: always
+    ports:
+      - "3307:${POSTGRES_PORT}"
+    volumes:
+      - db_data:/var/lib/postgresql/data:rw
+
+  ###> doctrine/doctrine-bundle ###
+  database:
+    image: postgres:${POSTGRES_VERSION:-14}-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-app}
+      # You should definitely change the password in production
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-!ChangeMe!}
+      POSTGRES_USER: ${POSTGRES_USER:-app}
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+      # You may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
+      # - ./docker/db/data:/var/lib/postgresql/data:rw
+###< doctrine/doctrine-bundle ###
+
+volumes:
+  php_socket:
+  db_data:
+
+  ###> doctrine/doctrine-bundle ###
+  db-data:
+###< doctrine/doctrine-bundle ###
