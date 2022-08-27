@@ -21,6 +21,7 @@
     <php>
         <server name="APP_ENV" value="test" force="true"/>
         <server name="KERNEL_CLASS" value="Lenny4\DoctrineMergePersistentCollectionBundle\Kernel"/>
+        <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/>
     </php>
     <testsuites>
         <testsuite name="DoctrineMergePersistentCollection Test Suite">
