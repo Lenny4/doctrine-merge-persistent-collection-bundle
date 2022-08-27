@@ -2,9 +2,9 @@
 
 namespace Lenny4\DoctrineMergePersistentCollectionBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
-class DoctrineMergePersistentCollectionBundle extends Bundle
+class DoctrineMergePersistentCollectionBundle extends AbstractBundle
 {
 
 }
