@@ -5,8 +5,8 @@ on:
   pull_request:
 
 jobs:
-  build:
-    name: Docker build
+  tests:
+    name: Tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -25,7 +25,11 @@ jobs:
             esac
           done
           exit 1
-      - name: Check HTTP reachability
-        run: curl http://localhost
-      - name: Check HTTPS reachability
-        run: curl -k https://localhost
+      - name: Create test database
+        run: docker-compose exec -T php bin/console -e test doctrine:database:create
+      - name: Create database schema
+        run: docker-compose exec -T php bin/console -e test doctrine:schema:update --force
+      - name: Load fixtures
+        run: docker-compose exec -T php bin/console -e test doctrine:fixtures:load --no-interaction
+      - name: PHPUnit
+        run: docker-compose exec -T php bin/phpunit
