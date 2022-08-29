@@ -3,7 +3,7 @@
 # Merge persistence collection when update entity
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/lenny4/doctrine-merge-persistent-collection-bundle.svg?style=flat-square)](https://packagist.org/packages/lenny4/doctrine-merge-persistent-collection-bundle)
-[![Tests](https://github.com/lenny4/doctrine-merge-persistent-collection-bundle/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/lenny4/doctrine-merge-persistent-collection-bundle/actions/workflows/run-tests.yml)
+[![Tests](https://github.com/lenny4/doctrine-merge-persistent-collection-bundle/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/lenny4/doctrine-merge-persistent-collection-bundle/actions/workflows/ci.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/lenny4/doctrine-merge-persistent-collection-bundle.svg?style=flat-square)](https://packagist.org/packages/lenny4/doctrine-merge-persistent-collection-bundle)
 
 This bundle is very usefull if you are using [ApiPlatform](https://api-platform.com/docs/distribution/) and you don't
