@@ -39,7 +39,7 @@ class PutFatherController extends AbstractController
                 return $son1->getName() === $son2->getName();
             },
             static function (Son $son1, Son $son2) {
-                return $son1->setAge($son2->getAge());
+                $son1->setAge($son2->getAge());
             },
         );
         return $data;
