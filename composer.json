@@ -7,7 +7,7 @@
         "Lenny4",
         "doctrine-merge-persistent-collection-bundle",
         "doctrine",
-        "api-platform",
+        "api-platform"
     ],
     "homepage": "https://github.com/lenny4/doctrine-merge-persistent-collection-bundle",
     "license": "MIT",
