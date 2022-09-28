@@ -1,10 +1,10 @@
 <?php
 
-namespace Lenny4\DoctrineMergePersistentCollectionBundle\Controller;
+namespace Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Controller;
 
 use Lenny4\DoctrineMergePersistentCollectionBundle\DoctrineMergePersistentCollection;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Entity\Father;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Entity\Son;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Father;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Son;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PutFatherController extends AbstractController

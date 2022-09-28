@@ -140,25 +140,27 @@ calling `doctrineMergePersistentCollection->merge` as shown in the Usage.
 ## Use case (example)
 
 1) Add a son `PUT /api/fathers/1`
+
 ```json
 {
-  "name": "father2",
-  "sons": [
-    {
-      "name": "son1",
-      "age": 10
-    },
-    {
-      "name": "son2",
-      "age": 20
-    },
-    {
-      "name": "son3",
-      "age": 30
-    }
-  ]
+    "name": "father2",
+    "sons": [
+        {
+            "name": "son1",
+            "age": 10
+        },
+        {
+            "name": "son2",
+            "age": 20
+        },
+        {
+            "name": "son3",
+            "age": 30
+        }
+    ]
 }
 ```
+
 This will change the name of the father to `father2` and add a son. Result:
 
 | id | name | age | father_id |
@@ -168,28 +170,29 @@ This will change the name of the father to `father2` and add a son. Result:
 | 3  | son3 | 30  | 1         |
 
 2) Update son2 age `PUT /api/fathers/1`
+
 ```json
 {
-  "name": "father2",
-  "sons": [
-    {
-      "name": "son1",
-      "age": 10
-    },
-    {
-      "name": "son2",
-      "age": 30
-    }
-  ]
+    "name": "father2",
+    "sons": [
+        {
+            "name": "son1",
+            "age": 10
+        },
+        {
+            "name": "son2",
+            "age": 30
+        }
+    ]
 }
 ```
+
 This will change the name of the father to `father2` and son2 age. Result:
 
 | id | name | age | father_id |
 |----|------|-----|-----------|
 | 1  | son1 | 10  | 1         |
 | 2  | son2 | 30  | 1         |
-
 
 ## Testing
 

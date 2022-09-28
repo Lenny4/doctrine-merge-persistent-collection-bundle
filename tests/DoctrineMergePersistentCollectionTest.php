@@ -3,7 +3,7 @@
 namespace Lenny4\DoctrineMergePersistentCollectionBundle\Tests;
 
 use ApiPlatform\Core\Bridge\Symfony\Bundle\Test\ApiTestCase;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Repository\SonRepository;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Repository\SonRepository;
 use Symfony\Component\HttpFoundation\Request;
 
 class DoctrineMergePersistentCollectionTest extends ApiTestCase

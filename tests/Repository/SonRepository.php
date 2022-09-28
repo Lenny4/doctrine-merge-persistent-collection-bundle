@@ -1,10 +1,10 @@
 <?php
 
-namespace Lenny4\DoctrineMergePersistentCollectionBundle\Repository;
+namespace Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Repository;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Entity\Son;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Son;
 
 /**
  * @extends ServiceEntityRepository<Son>

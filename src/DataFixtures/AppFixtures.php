@@ -4,8 +4,8 @@ namespace Lenny4\DoctrineMergePersistentCollectionBundle\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Entity\Father;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Entity\Son;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Father;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Son;
 
 class AppFixtures extends Fixture
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Lenny4\DoctrineMergePersistentCollectionBundle\Entity;
+namespace Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Repository\SonRepository;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Repository\SonRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ApiResource(

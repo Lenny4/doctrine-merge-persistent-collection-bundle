@@ -22,3 +22,17 @@ services:
 
   # add more service definitions when explicit configuration is needed
   # please note that last definitions always *replace* previous ones
+  Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Controller\PutFatherController:
+    public: true
+
+  Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Father:
+    public: true
+
+  Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity\Son:
+    public: true
+
+  Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Repository\FatherRepository:
+    public: true
+
+  Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Repository\SonRepository:
+    public: true

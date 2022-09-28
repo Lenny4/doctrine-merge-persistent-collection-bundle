@@ -13,6 +13,6 @@ doctrine:
       Lenny4\DoctrineMergePersistentCollectionBundle:
         is_bundle: false
         type: attribute
-        dir: '%kernel.project_dir%/src/Entity'
-        prefix: 'Lenny4\DoctrineMergePersistentCollectionBundle\Entity'
+        dir: '%kernel.project_dir%/tests/Entity'
+        prefix: 'Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity'
         alias: Lenny4\DoctrineMergePersistentCollectionBundle

@@ -1,13 +1,13 @@
 <?php
 
-namespace Lenny4\DoctrineMergePersistentCollectionBundle\Entity;
+namespace Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Controller\PutFatherController;
-use Lenny4\DoctrineMergePersistentCollectionBundle\Repository\FatherRepository;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Controller\PutFatherController;
+use Lenny4\DoctrineMergePersistentCollectionBundle\Tests\Repository\FatherRepository;
 use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ApiResource(
