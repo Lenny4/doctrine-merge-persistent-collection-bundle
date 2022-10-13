@@ -1,0 +1,4 @@
+Prevent Error:
+
+The directory "/srv/api/vendor/lenny4/doctrine-merge-persistent-collection-bundle/src/Entity" does not exist in .
+(which is being imported from "/srv/api/config/routes/api_platform.yaml"). Make sure there is a loader supporting the "api_platform" type.

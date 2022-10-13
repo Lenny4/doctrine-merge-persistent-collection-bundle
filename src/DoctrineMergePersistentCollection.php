@@ -12,6 +12,7 @@ class DoctrineMergePersistentCollection
         callable|null        $mergeElement = null
     ): void
     {
+        $collection->setDirty(true);
         $collection->setInitialized(false);
         $collection->initialize();
         // region remove deleted elements
@@ -75,9 +76,7 @@ class DoctrineMergePersistentCollection
 
         // It doesn't work if we don't remove all elements and then add them
         $elementToAdd = $collection->toArray();
-        foreach ($collection as $element) {
-            $collection->removeElement($element);
-        }
+        $collection->clear();
         foreach ($elementToAdd as $element) {
             $collection->add($element);
         }
