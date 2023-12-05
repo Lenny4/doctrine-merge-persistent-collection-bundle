@@ -1,7 +1,7 @@
 {
     "name": "lenny4/doctrine-merge-persistent-collection-bundle",
     "description": "Merge persistence collection when update entity",
-    "version": "1.1.4",
+    "version": "1.2.0",
     "type": "symfony-bundle",
     "keywords": [
         "Lenny4",
@@ -29,16 +29,15 @@
         "symfony/symfony": "*"
     },
     "require-dev": {
-        "api-platform/core": "^2.6",
+        "api-platform/core": "^3.2",
         "dama/doctrine-test-bundle": "^7.1",
-        "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.7",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "nelmio/cors-bundle": "^2.2",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.7",
-        "phpunit/phpunit": "^9.5",
+        "phpunit/phpunit": "^10",
         "rector/rector": "dev-main",
         "roave/security-advisories": "dev-latest",
         "symfony/asset": "^6.1",

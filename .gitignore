@@ -87,3 +87,9 @@ docker-compose.override.yml
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+
+###> phpstan/phpstan ###
+phpstan.neon
+phpstan.dist.neon
+###< phpstan/phpstan ###
+
